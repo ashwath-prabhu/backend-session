@@ -1,0 +1,23 @@
+// Tells the TypeScript compiler (`tsc`) how to type-check the code.
+// tsc only checks types; code-quality rules live in eslint.config.mjs and
+// formatting in .prettierrc.json.
+{
+  "compilerOptions": {
+    // JavaScript version to assume; Node 22 supports ES2022.
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    // esbuild bundles the code, so let TypeScript resolve imports the way a bundler does.
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    // Type definitions to load, e.g. so `APIGatewayProxyResultV2` is known.
+    "types": ["node", "aws-lambda"],
+    // Stricter checks, e.g. possibly `null` or `undefined` values must be handled.
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    // Only check types; esbuild (via serverless-esbuild) produces the JavaScript.
+    "noEmit": true
+  },
+  "include": ["src/**/*.ts"]
+}

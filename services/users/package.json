@@ -1,0 +1,32 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Users service: Hello World API with Serverless Framework v3, Node.js and TypeScript",
+  "scripts": {
+    "build": "tsc && serverless package",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "invoke": "serverless invoke local --function hello",
+    "offline": "serverless offline",
+    "deploy": "serverless deploy",
+    "remove": "serverless remove"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/aws-lambda": "^8.10.164",
+    "@types/node": "^22.20.5",
+    "esbuild": "^0.28.2",
+    "eslint": "^10.13.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.7",
+    "prettier": "^3.9.10",
+    "serverless-esbuild": "^1.57.2",
+    "serverless-offline": "^13.10.2",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.0"
+  }
+}
